@@ -6,12 +6,14 @@
     background-color: aliceblue;
 }
 .cards-container{
-    padding:1rem;
-    box-sizing: border-box;
+    padding:2rem;
+    /* box-sizing: border-box;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows:max-content;
     grid-column-gap:1rem;
     grid-row-gap:1rem;
-    height: 100vh;
+    height: 100vh; */
+    display:flex;
+    flex-wrap: wrap;
 }
