@@ -1,0 +1,66 @@
+.card{
+    position: relative;
+    height: 150px;
+    width: 450px;
+    background-color:white;
+    border:1px solid navy;
+    display: flex;
+    box-sizing: border-box;
+    padding: 1rem;
+    box-shadow: 2px 2px 0 0 rgba(50, 45, 67, 0.2);
+   
+}
+.card-left{
+   
+    width:150px;
+    height:100%;
+    background-color: whitesmoke;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card-right{
+
+   
+    width:450px;
+    background-color : white;
+    width: 300px;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+.name{
+    box-sizing: border-box;
+    width:100%;
+    height:25%;
+    background-color: white;
+    padding:0.5rem;
+}
+.user-id{
+    box-sizing:border-box;
+    width:100%;
+    height:25%;
+    background-color: white;
+    padding:0.5rem;
+}
+.stats{
+    height:50%;
+    display:flex;
+    padding:.5rem;
+    gap: 0.5rem;
+    
+}
+.stat{
+    background-color: whitesmoke;
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;c
+}
+.profile-img{
+    height: 100%;
+    border-radius: 100%;
+    
+}
