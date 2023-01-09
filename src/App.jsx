@@ -1,20 +1,29 @@
 import { useState, useEffect } from "react";
 import './App.css';
 import Card from "./Card/Card";
+import Skeletons from "./Skeleton/Skeleton";
 
 
 function App() {
   const [users , setUsers] = useState([]);
+  const[isLoading , setIsLoading] = useState(true);
+
   const getUsers = async ()=>{
     //
-    const response = await fetch('https://api.github.com/users');
+    setTimeout( async ()=>{
+      const response = await fetch('https://api.github.com/users');
+      const data = await response.json();
+      setUsers(data);
+      console.log(data);
+      setIsLoading(false);
+    } , 1000);
+    
     //If await is not put in the front , then a pending promise is returned
     //When we put await , the promise after being resolved  , the response is returned
     //Then  , the response is in json format
     //We gotta convert it into a javascript object for using
-    const data = await response.json(); // This too is an asynchronous function
-    setUsers(data);
-    console.log(data);
+    // This too is an asynchronous function
+    
 
 
   }
@@ -49,11 +58,12 @@ useEffect(()=>{
   });
 
   
+  
   return <div className="App">
       Github Profiles for you
     <div className="cards-container">
+    {isLoading?<Skeletons/>:list}    
     
-    {list}
 
     </div>
     
