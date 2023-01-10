@@ -26,7 +26,7 @@ function App() {
       setUsers(data);
       console.log(data);
       setIsLoading(false);
-    } , 1000);
+    } , 3000);
     
     //If await is not put in the front , then a pending promise is returned
     //When we put await , the promise after being resolved  , the response is returned
@@ -71,9 +71,9 @@ useEffect(()=>{
   
   
   return <div className="App">
-    {isHeadingLoading? <Skeletons type='heading'/>:<div>{heading}</div>}
+    {isHeadingLoading? <Skeletons type='heading'/>:<div className="heading">{heading}</div>}
     <div className="cards-container">
-    {isLoading?<Skeletons type='profile'/>:list}    
+    {isLoading?<Skeletons type='custom'/>:list}    
     
 
     </div>

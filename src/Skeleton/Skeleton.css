@@ -82,3 +82,56 @@
     animation:skeleton 1s ease infinite alternate;
 
 }
+.cirlce{
+display: flex;
+width:100%;
+justify-content: center;
+align-items:center;    
+}
+
+.customLoader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height:50vh;
+}
+
+.loaderImage{
+    height:200px;
+    width:200px;
+}
+
+.balls{
+    display: flex;
+}
+
+.ball{
+    height:10px;
+    width:10px;
+    border-radius:50%;
+    background-color: black;
+    margin-right:10px;
+    animation:ballJump 0.5s ease infinite alternate;
+
+}
+
+.ball1{
+    animation-delay: 0.1s;
+}
+.ball2{
+    animation-delay:0.2s;
+}
+.ball3{
+    animation-delay:0.3s;
+}
+
+@keyframes  ballJump{
+    to{
+        transform: translateY(-10px);
+    }
+    
+}
+.customText{
+    font-weight: 100;
+}
