@@ -19,3 +19,16 @@
     background-color: #fff;
     
 }
+.heading-sk{
+    height:2rem;
+    width:100px;
+    background-color:rgb(220, 217, 217);
+    animation:skeleton 1s ease infinite alternate;
+
+}
+@keyframes skeleton {
+    to{
+        opacity: 0.5;
+    }
+    
+}

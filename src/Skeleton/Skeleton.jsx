@@ -1,7 +1,7 @@
 import React from 'react';
 import './Skeleton.css';
 
-const Skeleton = ()=>{
+const ProfilesSkeleton = ()=>{
     return <div className='card-sk'>
     <div className='card-left-sk'>
       <div className='img-sk'></div>
@@ -19,11 +19,16 @@ const Skeleton = ()=>{
 </div>
 }
 
-const Skeletons = () => {
-  return (
-    Array(9).fill(<Skeleton/>)
-    
-  )
+const Skeletons = (props) => {
+
+  if(props.type === 'profile')
+  {
+    return Array(9).fill(<ProfilesSkeleton/>)
+  }
+  else if(props.type == 'heading')
+  {
+    return <div className='heading-sk'></div>  
+  }
 }
 
 export default Skeletons;

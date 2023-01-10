@@ -6,7 +6,17 @@ import Skeletons from "./Skeleton/Skeleton";
 
 function App() {
   const [users , setUsers] = useState([]);
+  const [heading , setHeading ] = useState('');
+  const [isHeadingLoading , setIsHeadingLoading] = useState(true);
   const[isLoading , setIsLoading] = useState(true);
+
+  const getHeading  = async ()=>{
+    
+    setTimeout(()=>{
+      setHeading("Github  Users Profile");
+      setIsHeadingLoading(false);
+    },500);
+  }
 
   const getUsers = async ()=>{
     //
@@ -50,6 +60,7 @@ useEffect(()=>{
   //And this function can be made asynchronous
 
   getUsers();
+  getHeading();
 } ,[])
 
 
@@ -60,9 +71,9 @@ useEffect(()=>{
   
   
   return <div className="App">
-      Github Profiles for you
+    {isHeadingLoading? <Skeletons type='heading'/>:<div>{heading}</div>}
     <div className="cards-container">
-    {isLoading?<Skeletons/>:list}    
+    {isLoading?<Skeletons type='profile'/>:list}    
     
 
     </div>
